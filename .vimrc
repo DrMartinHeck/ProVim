@@ -121,7 +121,7 @@ filetype plugin indent on " required by Pathogen Plugin Manager
 
 " Theme
 set background=light
-colorscheme solarized
+colorscheme default
 
 " CtrlP
 map <leader>t <C-p>

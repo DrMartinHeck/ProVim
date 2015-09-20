@@ -52,6 +52,7 @@ alias l="ls -lh --color=auto"
 alias e="exit"
 alias ..="cd .."
 alias ...="cd ../.."
+#I should add some aliases, of type ga = git add etc.
 # }}}
 
 # Auto Completion {{{
