@@ -1,5 +1,5 @@
 # Exports {{{
-export GITHUB_USER="your-username"
+export GITHUB_USER="DrMartinHeck"
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin # Reorder PATH so local bin is first
 export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='1;32'
@@ -12,6 +12,8 @@ export LS_COLORS=Gxfxcxdxbxegedabagacad
 # }}}
 
 # Ruby {{{
+# This section is to be removed, when I'm done with the ProVim Book, as it is
+# not needed.
 function get_ruby_version() {
   ruby -v | awk '{print $1 " " $2}'
 }
@@ -42,6 +44,14 @@ alias tmuxsrc="tmux source-file ~/.tmux.conf"
 alias tmuxkillall="tmux ls | cut -d : -f 1 | xargs -I {} tmux kill-session -t {}" # tmux kill all sessions
 alias ct="ctags -R --exclude=.git --exclude=node_modules"
 alias dotfiles="ls -a | grep '^\.' | grep --invert-match '\.DS_Store\|\.$'"
+# Some aliases I copy over from my .bashrc
+alias la="ls -lah --color=auto"
+alias lt="ls -lahtr --color=auto"
+alias ll="ls -lhtr --color=auto"
+alias l="ls -lh --color=auto"
+alias e="exit"
+alias ..="cd .."
+alias ...="cd ../.."
 # }}}
 
 # Auto Completion {{{
@@ -126,6 +136,7 @@ export PR_BOLD_WHITE PR_BOLD_BLACK
 
 # Clear LSCOLORS
 unset LSCOLORS
+unset LS_COLORS
 # }}}
 
 # Set Options {{{
@@ -263,8 +274,7 @@ function current_pwd {
 # ${PR_GREEN}%n%{$reset_color%} %{$FG[239]%}at%{$reset_color%} ${PR_BOLD_BLUE}$(box_name)%{$reset_color%} %{$FG[239]%}in%{$reset_color%} ${PR_BOLD_YELLOW}$(current_pwd)%{$reset_color%} $(git_prompt_string)
 # $(prompt_char) '
 
-PROMPT='
-${PR_GREEN}M.%{$reset_color%} ${PR_BOLD_YELLOW}$(current_pwd)%{$reset_color%} $(git_prompt_string)
+PROMPT='${PR_GREEN}M.%{$reset_color%} ${PR_BOLD_YELLOW}$(current_pwd)%{$reset_color%} $(git_prompt_string)
 $(prompt_char) '
 
 export SPROMPT="Correct $fg[red]%R$reset_color to $fg[green]%r$reset_color [(y)es (n)o (a)bort (e)dit]? "
