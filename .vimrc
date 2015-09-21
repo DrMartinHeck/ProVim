@@ -113,9 +113,11 @@ let g:netrw_liststyle=3
 " cutoff appears on longer screens
 autocmd BufWinEnter * highlight ColorColumn ctermbg=darkred
 set colorcolumn=80
-" My own stuff:
-let g:airline_left_sep=''
-let g:airline_right_sep=''
+" Martin's own stuff:
+" After messing around with fc-cache and restarting
+" the X-server, I shouldn't need to remove this stuff any more.
+"let g:airline_left_sep=''
+"let g:airline_right_sep=''
 " }}}
 
 " Plugins {{{
