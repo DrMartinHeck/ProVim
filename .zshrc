@@ -52,6 +52,28 @@ alias l="ls -lh --color=auto"
 alias e="exit"
 alias ..="cd .."
 alias ...="cd ../.."
+
+alias cdh="cd ~heck/home_old/"
+alias cds="cd /local/scratch/heck/"
+alias hn="hostname"
+alias rm="rm -i"
+alias roo="root -l"
+
+#git related
+alias gs="git status "
+alias ga="git add "
+alias gc="git commit"
+alias gk="gitk --all"
+
+#Due to the two system python / basf2 python conflict in
+#clang complete, we reduce the LD_LIBRARY_PATH
+alias vi="LD_LIBRARY_PATH=\"\" vim "
+
+#In cases we need to use svn, let's take vim as editor.
+export SVN_EDITOR="vi"
+#In case I go back to eclipse, this might be helpful.
+export PATH=/local/scratch/heck/eclipse/eclipse:$PATH
+
 #I should add some aliases, of type ga = git add etc.
 # }}}
 
