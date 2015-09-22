@@ -190,6 +190,10 @@ function virtualenv_info {
   [ $VIRTUAL_ENV ] && echo '('`basename $VIRTUAL_ENV`') '
 }
 
+function basf_dir {
+  [ $BELLE2_LOCAL_DIR ] && echo '('`basename $BELLE2_LOCAL_DIR`') '
+}
+
 #Martin's comment: this is meant to distinguish between different types of
 #version controll systems, but I don't use hg, therefore I will simply eliminate it
 #from the prompt
@@ -285,7 +289,9 @@ function current_pwd {
 
 export SPROMPT="Correct $fg[red]%R$reset_color to $fg[green]%r$reset_color [(y)es (n)o (a)bort (e)dit]? "
 
-RPROMPT='${PR_GREEN}$(virtualenv_info)%{$reset_color%} ${PR_RED}$(get_ruby_version)%{$reset_color%}'
+#Martin: I don't need ruby, but I want to know, if I sourced the tools, and what is my local basf2 dir.
+#RPROMPT='${PR_GREEN}$(virtualenv_info)%{$reset_color%} ${PR_RED}$(get_ruby_version)%{$reset_color%}'
+ RPROMPT='${PR_GREEN}$(virtualenv_info)%{$reset_color%} ${PR_RED}$(basf_dir)%{$reset_color%}'
 # }}}
 
 # History {{{
