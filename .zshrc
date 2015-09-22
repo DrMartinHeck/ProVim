@@ -218,7 +218,7 @@ GIT_PROMPT_AHEAD="%{$fg[red]%}ANUM%{$reset_color%}"
 GIT_PROMPT_BEHIND="%{$fg[cyan]%}BNUM%{$reset_color%}"
 GIT_PROMPT_MERGING="%{$fg_bold[magenta]%}⚡︎%{$reset_color%}"
 GIT_PROMPT_UNTRACKED="%{$fg_bold[red]%}u%{$reset_color%}"
-GIT_PROMPT_MODIFIED="%{$fg_bold[yellow]%}m%{$reset_color%}"
+GIT_PROMPT_MODIFIED="%{$fg_bold[blue]%}m%{$reset_color%}"
 GIT_PROMPT_STAGED="%{$fg_bold[green]%}s%{$reset_color%}"
 
 # Show Git branch/tag, or name-rev if on detached head
@@ -275,7 +275,7 @@ function current_pwd {
 
 # Original prompt with User name and Computer name included...
  PROMPT='
- ${PR_BLUE}%S%T%{$reset_color%} ${PR_GREEN}%n%{$reset_color%}%{$FG[239]%}@%{$reset_color%}${PR_BOLD_BLUE}$(box_name)%{$reset_color%}%{$FG[239]%}:%{$reset_color%} ${PR_GREEN}$(current_pwd)%{$reset_color%} $(git_prompt_string)
+ ${PR_BOLD_BLUE}%S%T%{$reset_color%} ${PR_BOLD_GREEN}%n%{$reset_color%}%{$FG[239]%}@%{$reset_color%}${PR_BOLD_BLUE}$(box_name)%{$reset_color%}%{$FG[239]%}:%{$reset_color%} ${PR_GREEN}$(current_pwd)%{$reset_color%} $(git_prompt_string)
  '
 # $(prompt_char) '
 
