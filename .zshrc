@@ -130,6 +130,10 @@ zstyle '*' single-ignored show
 # }}}
 
 # Key Bindings {{{
+# Martin: From http://dougblack.io/words/zsh-vi-mode.html
+# vi Bindings
+bindkey -v
+export KEYTIMEOUT=1
 # Make the delete key (or Fn + Delete on the Mac) work instead of outputting a ~
 bindkey '^?' backward-delete-char
 bindkey "^[[3~" delete-char
@@ -304,7 +308,7 @@ function current_pwd {
 }
 
 # Original prompt with User name and Computer name included...
- PROMPT=' ${PR_BOLD_BLUE}%S%T%{$reset_color%} ${PR_GREEN}%n%{$reset_color%}%{$FG[239]%}@%{$reset_color%}${PR_BOLD_BLUE}$(box_name)%{$reset_color%}%{$FG[239]%}:%{$reset_color%}${PR_GREEN}$(current_pwd)%{$reset_color%} $(git_prompt_string)
+ PROMPT=' ${PR_BOLD_BLUE}%T%{$reset_color%} ${PR_GREEN}%n%{$reset_color%}%{$FG[239]%}@%{$reset_color%}${PR_BOLD_BLUE}$(box_name)%{$reset_color%}%{$FG[239]%}:%{$reset_color%}${PR_GREEN}$(current_pwd)%{$reset_color%} $(git_prompt_string)
  '
 # $(prompt_char) '
 

@@ -358,4 +358,4 @@ let g:clang_use_library = 1 " Set to 0 if you want to use the clang executable i
 let g:clang_library_path = "/usr/lib/" " symlink to actual library there
 
 "quick-compile test when pressing F11 (useful to catch syntax errors early)
-map <C-F11> :call g:ClangUpdateQuickFix()<CR><CR>
+map <C-w>e :call g:ClangUpdateQuickFix()<CR>
