@@ -355,7 +355,6 @@ autocmd FilterWritePre * call SetDiffColors()
 let g:clang_complete_auto = 1 " automatically show suggestions when typing ., -> or ::
 let g:clang_complete_copen = 1 " open quick-fix window on errors
 let g:clang_use_library = 1 " Set to 0 if you want to use the clang executable instead of libclang (slower, less features)
-let g:clang_debug = 0
 let g:clang_library_path = "/usr/lib/" " symlink to actual library there
 
 "quick-compile test when pressing F11 (useful to catch syntax errors early)
