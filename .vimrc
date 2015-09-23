@@ -109,10 +109,10 @@ set showmatch
 " Set built-in file system explorer to use layout similar to the NERDTree plugin
 let g:netrw_liststyle=3
 
-" Always highlight column 80 so it's easier to see where
+" Always highlight column 120 so it's easier to see where
 " cutoff appears on longer screens
 autocmd BufWinEnter * highlight ColorColumn ctermbg=darkred
-set colorcolumn=80
+set colorcolumn=120
 " Martin's own stuff:
 " After messing around with fc-cache and restarting
 " the X-server, I shouldn't need to remove this stuff any more.
@@ -349,6 +349,7 @@ fun! SetDiffColors()
 endfun
 autocmd FilterWritePre * call SetDiffColors()
 " }}}
+
 " Cpp related additional stuff from Martin {{{
 "From the Belle II TWiki page made by Christian P.
 let g:clang_complete_auto = 1 " automatically show suggestions when typing ., -> or ::

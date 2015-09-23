@@ -213,7 +213,7 @@ function virtualenv_info {
 }
 
 function getopt_info {
-  [ $BELLE2_EXTERNALS_OPTION ] && echo $BELLE2_EXTERNALS_OPTION
+  [ $BELLE2_OPTION ] && echo $BELLE2_OPTION
 }
 
 function basf_dir {
