@@ -50,10 +50,10 @@ set backspace=indent,eol,start
 set expandtab
 
 " Set tab size in spaces (this is for manual indenting)
-set tabstop=4
+set tabstop=2
 
 " The number of spaces inserted for a tab (used for auto indenting)
-set shiftwidth=4
+set shiftwidth=2
 
 " Turn on line numbers
 set number
@@ -349,3 +349,13 @@ fun! SetDiffColors()
 endfun
 autocmd FilterWritePre * call SetDiffColors()
 " }}}
+" Cpp related additional stuff from Martin {{{
+"From the Belle II TWiki page made by Christian P.
+let g:clang_complete_auto = 1 " automatically show suggestions when typing ., -> or ::
+let g:clang_complete_copen = 1 " open quick-fix window on errors
+let g:clang_use_library = 1 " Set to 0 if you want to use the clang executable instead of libclang (slower, less features)
+let g:clang_debug = 0
+let g:clang_library_path = "/usr/lib/" " symlink to actual library there
+
+"quick-compile test when pressing F11 (useful to catch syntax errors early)
+map <C-F11> :call g:ClangUpdateQuickFix()<CR><CR>

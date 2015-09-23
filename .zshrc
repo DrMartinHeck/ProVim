@@ -212,6 +212,10 @@ function virtualenv_info {
   [ $VIRTUAL_ENV ] && echo '('`basename $VIRTUAL_ENV`') '
 }
 
+function getopt_info {
+  [ $BELLE2_EXTERNALS_OPTION ] && echo $BELLE2_EXTERNALS_OPTION
+}
+
 function basf_dir {
   [ $BELLE2_LOCAL_DIR ] && echo '('`basename $BELLE2_LOCAL_DIR`') '
 }
@@ -313,7 +317,7 @@ export SPROMPT="Correct $fg[red]%R$reset_color to $fg[green]%r$reset_color [(y)e
 
 #Martin: I don't need ruby, but I want to know, if I sourced the tools, and what is my local basf2 dir.
 #RPROMPT='${PR_GREEN}$(virtualenv_info)%{$reset_color%} ${PR_RED}$(get_ruby_version)%{$reset_color%}'
- RPROMPT='${PR_GREEN}$(virtualenv_info)%{$reset_color%} ${PR_RED}$(basf_dir)%{$reset_color%}'
+ RPROMPT='${PR_GREEN}$(getopt_info)%{$reset_color%} ${PR_RED}$(basf_dir)%{$reset_color%}'
 # }}}
 
 # History {{{
