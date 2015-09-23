@@ -131,7 +131,7 @@ zstyle '*' single-ignored show
 
 # Key Bindings {{{
 # Martin: From http://dougblack.io/words/zsh-vi-mode.html
-# vi Bindings
+# vi Bindings; remove next two lines, if it doesn't work for me.
 bindkey -v
 export KEYTIMEOUT=1
 # Make the delete key (or Fn + Delete on the Mac) work instead of outputting a ~
