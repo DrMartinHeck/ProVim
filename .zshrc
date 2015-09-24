@@ -308,8 +308,7 @@ function current_pwd {
 }
 
 # Original prompt with User name and Computer name included...
- PROMPT=' ${PR_BOLD_BLUE}%T%{$reset_color%} ${PR_GREEN}%n%{$reset_color%}%{$FG[239]%}@%{$reset_color%}${PR_BOLD_BLUE}$(box_name)%{$reset_color%}%{$FG[239]%}:%{$reset_color%}${PR_GREEN}$(current_pwd)%{$reset_color%} $(git_prompt_string)
- '
+PROMPT=' '
 # $(prompt_char) '
 
 #Martin: The following three lines are the ProVim book prompt, but
@@ -321,7 +320,15 @@ export SPROMPT="Correct $fg[red]%R$reset_color to $fg[green]%r$reset_color [(y)e
 
 #Martin: I don't need ruby, but I want to know, if I sourced the tools, and what is my local basf2 dir.
 #RPROMPT='${PR_GREEN}$(virtualenv_info)%{$reset_color%} ${PR_RED}$(get_ruby_version)%{$reset_color%}'
- RPROMPT='${PR_GREEN}$(getopt_info)%{$reset_color%} ${PR_RED}$(basf_dir)%{$reset_color%}'
+RPROMPT='${${KEYMAP/vicmd/$VIM_PROMPT}/(main|viins)/} ${PR_GREEN}$(getopt_info)%{$reset_color%} ${PR_RED}$(basf_dir)%{$reset_color%}'
+function zle-line-init zle-keymap-select {
+VIM_PROMPT="%{$fg_bold[blue]%} [% NORMAL]% %{$reset_color%}"
+PROMPT=' '
+RPROMPT='${${KEYMAP/vicmd/$VIM_PROMPT}/(main|viins)/} ${PR_GREEN}$(getopt_info)%{$reset_color%} ${PR_RED}$(basf_dir)%{$reset_color%}'
+zle reset-prompt
+}
+zle -N zle-line-init
+zle -N zle-keymap-select
 # }}}
 
 # History {{{
@@ -338,6 +345,7 @@ function precmd {
 
   # Put the parentdir/currentdir in the tab
   echo -ne "\e]1;$PWD:h:t/$PWD:t\a"
+  print -rP " ${PR_BOLD_BLUE}%T%{$reset_color%} ${PR_GREEN}%n%{$reset_color%}%{$FG[239]%}@%{$reset_color%}${PR_BOLD_BLUE}$(box_name)%{$reset_color%}%{$FG[239]%}:%{$reset_color%}${PR_GREEN}$(current_pwd)%{$reset_color%} $(git_prompt_string)"
 }
 
 function set_running_app {
