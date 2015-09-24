@@ -132,6 +132,8 @@ zstyle '*' single-ignored show
 # Key Bindings {{{
 # Martin: From http://dougblack.io/words/zsh-vi-mode.html
 # vi Bindings; remove next two lines, if it doesn't work for me.
+# to be able to show the vi mode, I had to give up a multiline prompt
+# and resorted to putting the usual info into the precmd function.
 bindkey -v
 export KEYTIMEOUT=1
 # Make the delete key (or Fn + Delete on the Mac) work instead of outputting a ~
@@ -221,7 +223,7 @@ function getopt_info {
 }
 
 function basf_dir {
-  [ $BELLE2_LOCAL_DIR ] && echo '('`basename $BELLE2_LOCAL_DIR`') '
+  [ $BELLE2_LOCAL_DIR ] && echo ''`basename $BELLE2_LOCAL_DIR`''
 }
 
 #Martin's comment: this is meant to distinguish between different types of
