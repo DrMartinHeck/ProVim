@@ -230,9 +230,9 @@ function basf_dir {
 #version controll systems, but I don't use hg, therefore I will simply eliminate it
 #from the prompt
 function prompt_char {
-  git branch >/dev/null 2>/dev/null && echo '±' && return
-  hg root >/dev/null 2>/dev/null && echo '☿' && return
-  echo '○'
+  git branch >/dev/null 2>/dev/null && echo '' && return # '±' && return
+  hg root >/dev/null 2>/dev/null && echo '○' && return
+  echo '☿'
 }
 
 function box_name {
@@ -310,8 +310,7 @@ function current_pwd {
 }
 
 # Original prompt with User name and Computer name included...
-PROMPT=' '
-# $(prompt_char) '
+PROMPT='$(prompt_char) '
 
 #Martin: The following three lines are the ProVim book prompt, but
 #I want the name and host as well in the prompt, so I try above.
@@ -325,7 +324,7 @@ export SPROMPT="Correct $fg[red]%R$reset_color to $fg[green]%r$reset_color [(y)e
 RPROMPT='${${KEYMAP/vicmd/$VIM_PROMPT}/(main|viins)/} ${PR_GREEN}$(getopt_info)%{$reset_color%} ${PR_RED}$(basf_dir)%{$reset_color%}'
 function zle-line-init zle-keymap-select {
 VIM_PROMPT="%{$fg_bold[blue]%} [% NORMAL]% %{$reset_color%}"
-PROMPT=' '
+PROMPT='$(prompt_char) '
 RPROMPT='${${KEYMAP/vicmd/$VIM_PROMPT}/(main|viins)/} ${PR_GREEN}$(getopt_info)%{$reset_color%} ${PR_RED}$(basf_dir)%{$reset_color%}'
 zle reset-prompt
 }
