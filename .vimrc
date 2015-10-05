@@ -359,3 +359,5 @@ let g:clang_library_path = "/usr/lib/" " symlink to actual library there
 
 "quick-compile test when pressing ...
 map <C-w>e :call g:ClangUpdateQuickFix()<CR>
+
+let g:syntastic_python_python_exec = '/local/scratch/heck/basf2/externals/v01-00-00/Linux_x86_64/common/bin/python3'
