@@ -67,7 +67,8 @@ alias gk="gitk --all"
 
 #Due to the two system python / basf2 python conflict in
 #clang complete, we reduce the LD_LIBRARY_PATH
-alias vi="LD_LIBRARY_PATH=\"\" vim "
+#alias vi="LD_LIBRARY_PATH=\"\" vim "
+alias vi="vim "
 
 #In cases we need to use svn, let's take vim as editor.
 export SVN_EDITOR="vi"
