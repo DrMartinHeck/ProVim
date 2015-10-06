@@ -121,6 +121,7 @@ set colorcolumn=120
 " }}}
 
 " Plugins {{{
+""""Or maybe I stay with pathogen, it is as well the ProVim thing.
 "I will move from pathogen to vundle, when there is
 "support for python 3 in YouCompleteMe
 "At that point, I want to use the setup at
