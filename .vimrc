@@ -121,6 +121,21 @@ set colorcolumn=120
 " }}}
 
 " Plugins {{{
+"I will move from pathogen to vundle, when there is
+"support for python 3 in YouCompleteMe
+"At that point, I want to use the setup at
+"http://www.neuraladvance.com/vim-as-an-ide-for-python-and-c.html
+"At the moment, I have removed the clang_complete stuff...
+"From the Vundle documentation:
+""filetype off
+" set the runtime path to include Vundle and initialize
+""set rtp+=~/.vim/bundle/Vundle.vim
+""call vundle#begin()
+" let Vundle manage Vundle, required
+""Plugin 'VundleVim/Vundle.vim'
+""Plugin 'Valloric/YouCompleteMe'
+""call vundle#end()         " required
+
 execute pathogen#infect()
 filetype plugin indent on " required by Pathogen Plugin Manager
 
@@ -358,6 +373,7 @@ let g:clang_use_library = 1 " Set to 0 if you want to use the clang executable i
 let g:clang_library_path = "/usr/lib/" " symlink to actual library there
 
 "quick-compile test when pressing ...
-map <C-w>e :call g:ClangUpdateQuickFix()<CR>
+"removed clang_complete from the plugins.
+"map <C-w>e :call g:ClangUpdateQuickFix()<CR>
 
 let g:syntastic_python_python_exec = '/local/scratch/heck/basf2/externals/v01-00-00/Linux_x86_64/common/bin/python3'
