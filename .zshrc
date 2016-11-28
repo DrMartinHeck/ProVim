@@ -59,6 +59,8 @@ alias hn="hostname"
 alias rm="rm -i"
 alias roo="root -l"
 
+alias setupB2="cds && cd basf2/ && source tools/setup_belle2"
+
 #git related
 alias gs="git status "
 alias ga="git add "
