@@ -377,4 +377,11 @@ let g:clang_library_path = "/usr/lib/" " symlink to actual library there
 "removed clang_complete from the plugins.
 "map <C-w>e :call g:ClangUpdateQuickFix()<CR>
 
-let g:syntastic_python_python_exec = '/local/scratch/heck/basf2/externals/v01-00-00/Linux_x86_64/common/bin/python3'
+"Python syntax checking now working with python3
+"let g:syntastic_python_python_exec = '/local/scratch/heck/basf2/externals/v01-00-00/Linux_x86_64/common/bin/python3'
+let g:syntastic_python_python_exec = '/usr/bin/python3'
+
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
