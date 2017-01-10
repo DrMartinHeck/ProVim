@@ -1,7 +1,7 @@
 # Exports {{{
 export GITHUB_USER="DrMartinHeck"
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin # Reorder PATH so local bin is first
-export GREP_OPTIONS='--color=auto'
+#export GREP_OPTIONS='--color=auto' # depricated.
 export GREP_COLOR='1;32'
 export MANPAGER="less -X" # Don’t clear the screen after quitting a manual page
 export EDITOR="vim"
@@ -9,6 +9,7 @@ export TERM="screen-256color"
 export CLICOLOR=1
 export LSCOLORS=Gxfxcxdxbxegedabagacad
 export LS_COLORS=Gxfxcxdxbxegedabagacad
+export GIT_AUTHOR_EMAIL=martin.heck@desy.de
 # }}}
 
 # Ruby {{{
@@ -54,7 +55,7 @@ alias ..="cd .."
 alias ...="cd ../.."
 
 alias cdh="cd ~heck/home_old/"
-alias cds="cd /local/scratch/heck/"
+alias cds="cd /local/scratch/hdd/heck/"
 alias hn="hostname"
 alias rm="rm -i"
 alias roo="root -l"
