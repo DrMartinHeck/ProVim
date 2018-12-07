@@ -13,3 +13,8 @@ The following lines helped me to tell cmake, which compiler to use.
 
 export CC= /.../gcc-4.5.2/bin/gcc/gcc
 export CXX=/.../gcc-4.5.2/bin/gcc/g++
+
+Instead of clang_complete, there are other clang-vim integrations,
+vim-clang is compatible with pathogen.
+
+Not sure yet, what to do for python autocompletion, but checking already does work!
