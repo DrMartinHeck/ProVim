@@ -1,6 +1,6 @@
 # Exports {{{
 export GITHUB_USER="DrMartinHeck"
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin # Reorder PATH so local bin is first
+export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin # Reorder PATH so local bin is first
 #export GREP_OPTIONS='--color=auto' # depricated.
 export GREP_COLOR='1;32'
 export MANPAGER="less -X" # Don’t clear the screen after quitting a manual page
@@ -72,6 +72,9 @@ alias gk="gitk --all"
 #clang complete, we reduce the LD_LIBRARY_PATH
 #alias vi="LD_LIBRARY_PATH=\"\" vim "
 alias vi="vim "
+
+#SDIL: For opening vpn like connection
+alias shutle="sshuttle -N -H -v -r dh9277@jump.sdil.kit.edu 141.52.224.0/24 172.18.102.0/24 -x 141.52.224.10"
 
 #In cases we need to use svn, let's take vim as editor.
 export SVN_EDITOR="vi"
